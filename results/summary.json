@@ -1,0 +1,37 @@
+{
+  "n_series": 50,
+  "forecast_horizon_days": 28,
+  "validation_windows": 3,
+  "test_start": "2016-04-25",
+  "test_end": "2016-05-22",
+  "model_hyperparameters_fixed_before_evaluation": true,
+  "validation_mean_wape": {
+    "poisson_boosting": 0.685419490277566,
+    "rolling_mean_28": 0.6721342893417658,
+    "seasonal_naive_7": 0.826563743414061
+  },
+  "validation_selected_method": "rolling_mean_28",
+  "test_metrics": {
+    "seasonal_naive_7": {
+      "mae": 1.5871428571428572,
+      "wape": 0.7747559274755927,
+      "bias": -0.03626220362622036
+    },
+    "rolling_mean_28": {
+      "mae": 1.3934183673469387,
+      "wape": 0.6801902769475991,
+      "bias": -0.019177126917712707
+    },
+    "poisson_boosting": {
+      "mae": 1.346585243056975,
+      "wape": 0.6573289192049389,
+      "bias": -0.016667667685894668
+    }
+  },
+  "inventory_lead_times_days": [
+    3,
+    7
+  ],
+  "inventory_is_simulated": true,
+  "archive_sha256": "cc704ba15d6802f8262e6ec7d4c6041e4ad6366a94365e8c84f721e450eed774"
+}

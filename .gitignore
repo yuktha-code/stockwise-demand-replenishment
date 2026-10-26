@@ -1,0 +1,13 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+data/
+*.sqlite
+*.db
+results/forecasts.csv
+results/inventory_daily.csv
+.DS_Store
