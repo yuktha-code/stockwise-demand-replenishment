@@ -12,14 +12,16 @@ A Python/SQL forecasting experiment connecting time-series model evaluation to i
 4. Feed forecasts into daily replenishment simulations with 3- and 7-day lead times.
 5. Export model errors, simulated inventory outcomes, source hashes, SQL tables and SKU exception reports.
 
-```mermaid
-flowchart TD
-  A[Public M5 sales and calendar data] --> B[Historical feature generation]
-  B --> C[Validation and recursive forecasting]
-  C --> D[Separate holdout evaluation]
-  D --> E[Replenishment policy simulations]
-  E --> F[CSV reports and SQLite reporting tables]
-```
+### Pipeline
+
+| Stage | Output |
+|---|---|
+| Public M5 sales and calendar data | 50 selected product-store series |
+| Historical feature generation | Lag, rolling and calendar features |
+| Validation and recursive forecasting | Three pre-test comparison windows |
+| Separate holdout evaluation | 28-day test forecasts and error metrics |
+| Replenishment policy simulation | Inventory scenarios at 3- and 7-day lead times |
+| Reporting | CSV outputs and SQLite reporting tables |
 
 ## Reference results
 
